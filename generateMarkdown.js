@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { create } = require('domain');
+
 inquirer
     .prompt([{
             type: 'input',
@@ -14,7 +16,7 @@ inquirer
         {
             type: 'input',
             name: 'install',
-            message: 'Enter installation instructions (separate using commas):',
+            message: 'Enter installation instructions:',
         },
         {
             type: 'input',
@@ -24,12 +26,12 @@ inquirer
         {
             type: 'input',
             name: 'contribution',
-            message: 'Enter contribution guidelines for the project',
+            message: 'Enter contribution guidelines for the project:',
         },
         {
             type: 'input',
             name: 'test',
-            message: 'Enter test information for the project',
+            message: 'Enter test information for the project:',
         },
         {
             type: 'input',
@@ -44,7 +46,7 @@ inquirer
         {
             type: 'input',
             name: 'gitHub',
-            message: 'Enter your GitHub Username:',
+            message: 'What is your GitHub Username?',
         },
         {
           type: "list",
@@ -60,23 +62,26 @@ inquirer
       }
     ])
 .then((data) => {
+    console.log("Creating README.md file...");
+    createREADME(data);
+})
 
-  fs.writeFile('README.md' , generateMarkdown(JSON.stringify(data)), (err) =>
-      err ? console.log(err) : console.log('Success!'))
-});
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+//   fs.writeFile('README.md' , generateMarkdown(JSON.stringify(data)), (err) =>
+//       err ? console.log(err) : console.log('Generating README.md...'))
+// });
+// // TODO: Create a function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
+// function renderLicenseBadge(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+// function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+// // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 

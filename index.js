@@ -51,7 +51,7 @@ inquirer
     ])
 .then((data) => {
 
-  fs.writeFile('ReadMe.md' , generateMarkdown(JSON.stringify(data)), (err) =>
+  fs.writeFile('README.md' , generateMarkdown(JSON.stringify(data)), (err) =>
       err ? console.log(err) : console.log('Success!'))
 // TODO: Create an array of questions for user input
 const questions = [];

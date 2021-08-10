@@ -1,14 +1,24 @@
 {
-  "name": "static-site",
+  "name": "Professional_README_Generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgmedrano/Professional_README_Generator.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+  "bugs": {
+    "url": "https://github.com/mgmedrano/Professional_README_Generator/issues"
+  },
+  "homepage": "https://github.com/mgmedrano/Professional_README_Generator#readme"
 }
