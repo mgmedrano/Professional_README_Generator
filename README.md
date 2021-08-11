@@ -21,7 +21,7 @@ Through the command-line the following will take place:
 - Then they are taken to the corresponding section of the README
 
 ## Generator Video Preview
-<iframe src="https://drive.google.com/file/d/1tzkwNHfLr_3SMq4HMZcdA_HxHj0ihpgQ/preview" width="500" height="550"></iframe>
+- https://drive.google.com/file/d/1tzkwNHfLr_3SMq4HMZcdA_HxHj0ihpgQ/preview
 
 ## Repository & Live Site
 - GitHub Repository: https://github.com/mgmedrano/Professional_README_Generator
