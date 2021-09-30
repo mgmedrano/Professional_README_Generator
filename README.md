@@ -1,3 +1,4 @@
+![](https://img.shields.io/badge/license-MIT%20License-blue?style=flat-square)
 # Professional README Generator
 
 ## Background
